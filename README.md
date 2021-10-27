@@ -12,19 +12,32 @@ video on a similar audio management tool to this one at this link here: https://
 
 What you will find in this repo:
 
-**Sound.cs**: A simple class to help us represent sounds in Unity. Used by the AudioManager class.
+`Sound.cs`: A simple class to help us represent sounds in Unity. Used by the `AudioManager` class.
 
-**AudioManager.cs**: This is the component class which you will drag into your Unity scene. Takes in
+`AudioManager.cs`: This is the component class which you will drag into your Unity scene. Takes in
                      many mixers and audio files through the Unity inspector, and can then be called
                      upon to play, pause, and stop those sounds at any time.
                      
-**SetVolume.cs**: Auxilliary script that adds some functionality with regards to adjusting sounds in
+`SetVolume.cs`: Auxilliary script that adds some functionality with regards to adjusting sounds in
                   the AudioManager.
 
-Requirements to use:
+**Requirements**
 * Unity engine on your computer
 * Basic understanding of Unity mixers/scripting
 * That's it!
 
+**How to Use this Component**
+* Download repo
+* Copy files into your Scripts directory in any Unity project
+* Create an `AudioManager` instance on an empty `GameObject`
+* Increase size of `sounds` array, and drag and drop your audio clips in (any Unity-supported file format will work!)
+* Name each clip, and assign any other optional values you desire
+* From any script, call `instance.Play(soundname)` where instance is your `AudioManager` instance and `soundname` is the string you named a particular `Sound`
+* You should hear your sound in Unity!
 
+That should be enough to get you started. Check out the source code to explore the other functionalities
+of this system -- I've gone to lengths to make them readable and self-documenting as much as possible.
+You can reach me with any bugs, questions, or concerns at maxwell.mitchell@tufts.edu
+
+Feel free to fork this repo and make it your own!
 
